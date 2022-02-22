@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "react-native run-ios --simulator=\"iPhone 11\"",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clean:ios": "watchman watch-del-all && rm -rf node_modules/ && yarn cache clean && yarn install && cd ios && rm -rf Pods && rm -rf build && pod install "
   },
   "dependencies": {
     "react": "17.0.2",
